@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>map</title>
+	<style type="text/css">
+		#container {width:500px; height: 300px; } 
+	</style>
+</head>
+<body>
+	<div id="container"></div> 
+
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3576c2d2b4418a4aa41bed872fa1e35a"></script>
+	<script type="text/javascript">
+		var map = new AMap.Map('container');
+		map.setZoom(11);
+		map.setCenter([121.57,38.91]);
+		map.setMapStyle("blue_night");
+		var marker = new AMap.Marker({
+			    position: [121.525804, 38.876167],
+			    map:map
+			});
+	</script>
+</body>
+</html>
