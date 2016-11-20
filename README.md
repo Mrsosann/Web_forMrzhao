@@ -40,11 +40,13 @@
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;分别给 用户登录 管理员登陆 二维码扫一扫添加了 模态框控件 ( .modal )</p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;将项目托管到github上,并添加了外部css js文件, hub文件名分别为 [index.html](https://github.com/Mrsosann/Web_forMrzhao/blob/master/index.html) [index.css](https://github.com/Mrsosann/Web_forMrzhao/blob/master/css/index.css) 以及 [index.js](https://github.com/Mrsosann/Web_forMrzhao/blob/master/js/index.js)</p>
+&nbsp;&nbsp;&nbsp;&nbsp;将项目托管到github上,并添加了外部css js文件, hub文件名分别为 
+[index.html] (https://github.com/Mrsosann/Web_forMrzhao/blob/master/index.html) 
+[index.css] (https://github.com/Mrsosann/Web_forMrzhao/blob/master/css/index.css) 以及 [index.js] (https://github.com/Mrsosann/Web_forMrzhao/blob/master/js/index.js)
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;修改了出现X方向滚动条的BUG</p>
 
 
-<p>04.(2016-11-21 凌晨) 
+<p>04.(2016-11-21 凌晨) </p>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;编写项目记录 [README.md](https://github.com/Mrsosann/Web_forMrzhao/blob/master/README.md)</p>
+&nbsp;&nbsp;&nbsp;&nbsp;编写项目记录[ README.md ](https://github.com/Mrsosann/Web_forMrzhao/blob/master/README.md)
