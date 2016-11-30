@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>admin</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/index.css"> -->
+    <style type="text/css">
+    body {
+        /*overflow-x: hidden;*/
+        /*padding-right: 15px;*/
+        padding-top: 50px;
+        /*background-color: #E3FDFD;/*F5F5F5*/*/
+        font-family: '微软雅黑';
+        color: #EDF2F6;
+      background: #43C6AC; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #43C6AC , #191654); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #43C6AC , #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .navbar-inverse {
+        /*background-color: #3B4A6B;*/
+        /*border-color: #3B4A6B;*/
+        background-color: #283739;
+        border-color: #283739;
+    }
+    
+    </style>
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
+            <a class="navbar-brand" href="#"><b>safe</b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                 <li >
+                    <a href="./admin.html">主页</a>
+                </li>
+                 <li>
+                    <a href="#">下载</a>
+                </li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">管理员登录</a></li>
+            <li><a href="#"><img src="./img/team.jpg" class="img-circle" style="width: 18px;height: 18px">&nbsp;管理员cz</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./img/team.jpg" class="img-circle" style="width: 18px;height: 18px">&nbsp;管理员cz<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="text-center"><a href="{:U('Admin/Index/logout')}">注销</a></li>
+              </ul>
+            </li> -->
+            <li><a href="#">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> 
+<div class="container">
+  <div class="page-header">
+    <h1>进行安全评估： <small style="color: #fff;">工程名</small></h1>
+  </div>
+
+    <form class="form-horizontal" id="signin-form" role="form" action="{:U('Index/Login/handle')}" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="telNumber" class="col-sm-5 control-label">损伤位置</label>
+        <div  class="col-sm-3">
+          <input type="text" name="tel" class="form-control" id="telNumber" placeholder="损伤位置">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password" class="col-sm-5 control-label">损伤程度</label>
+        <div class="col-sm-3">
+          <input type="text" name="password" class="form-control" id="password" placeholder="损伤程度">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password" class="col-sm-5 control-label">损伤分析报告</label>
+        <div class="col-sm-3">
+          <input type="text" name="confirm-password" class="form-control" id="confirm-password" placeholder="损伤分析报告">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">评估日报表</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="评估日报表">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">评估月报表</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="评估月报表">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">评估年报表</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="评估年报表">
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label for="sex" class="col-sm-5 control-label">æ€§&nbsp;&nbsp;åˆ«:</label>
+        <div class="col-sm-3">
+          ç”·&nbsp;<input type="radio" name="sex" value="1">
+          &nbsp;å¥³&nbsp;<input type="radio"  name="sex" value="0">
+        </div>
+      </div> -->
+      <!-- <div class="form-group">
+        <label for="inputEmail" class="col-sm-5 control-label">Q&nbsp;&nbsp;Q:</label>
+        <div class="col-sm-3">
+          <input type="email" class="form-control" id="inputEmail" placeholder="è¾“å…¥QQ">
+        </div>
+      </div> -->
+      <!-- <div class="form-group">
+        <label for="email" class="col-sm-5 control-label">邮箱</label>
+        <div class="col-sm-3">
+          <input type="email" name="email" class="form-control" id="email" placeholder="è¾“å…¥é‚®ç®±">
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">即时评估</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="即时评估">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">专家评估</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="专家评估">
+        </div>
+      </div><div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">预警信息</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="预警信息">
+        </div>
+      </div><div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">分析报告</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="分析报告">
+        </div>
+      </div><div class="form-group">
+        <label for="u_name" class="col-sm-5 control-label">异常位置和程度</label>
+        <div class="col-sm-3">
+          <input type="text" name="u_name" class="form-control" id="u_name" placeholder="异常位置和程度">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile" class="col-sm-5 control-label">图片</label>
+        <div class="col-sm-3">
+        <input type="file" name="photo" id="exampleInputFile">
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-10">
+          <div class="checkbox">
+            <label for="agree">
+              <input type="checkbox" name="agree" id="agree">我已仔细阅读并接受<a href="#">CZ注册条款</a>
+            </label>
+          </div>
+        </div>
+      </div> -->
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-10">
+          <button type="submit" class="btn btn-default">立即提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./bootstrap/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+  </html>

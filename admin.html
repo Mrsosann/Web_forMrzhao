@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>admin</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/index.css"> -->
+    <style type="text/css">
+		body {
+		    /*overflow-x: hidden;*/
+		    /*padding-right: 15px;*/
+		    padding-top: 50px;
+		    /*background-color: #E3FDFD;/*F5F5F5*/*/
+		    font-family: '微软雅黑';
+		    color: #EDF2F6;
+			background: #43C6AC; /* fallback for old browsers */
+			background: -webkit-linear-gradient(to left, #43C6AC , #191654); /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to left, #43C6AC , #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+		.navbar-inverse {
+		    /*background-color: #3B4A6B;*/
+		    /*border-color: #3B4A6B;*/
+		    background-color: #283739;
+		    border-color: #283739;
+		}
+		#tab-1-column1 {
+			border-right: 1px solid #ddd;
+		}
+		#tab-1-left {
+			width: 116px;
+			margin-top: 20px;
+		}
+		#tab-1-left .list-group-item {
+			padding: 20px;
+		}
+		.table tbody tr:hover {
+			/*transition: background-color 200ms;*/
+			background-color: #1C7293;
+		}
+		.table img {
+			width: 20px;
+			height: 20px;
+		}
+		#tab-2-column2 {
+			border-left: 1px solid #ddd;
+		}
+    </style>
+  </head>
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
+            <a class="navbar-brand" href="#"><b>safe</b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                 <li >
+                    <a href="#">主页</a>
+                </li>
+                 <li>
+                    <a href="#">下载</a>
+                </li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">管理员登录</a></li>
+            <li><a href="#"><img src="./img/team.jpg" class="img-circle" style="width: 18px;height: 18px">&nbsp;管理员cz</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./img/team.jpg" class="img-circle" style="width: 18px;height: 18px">&nbsp;管理员cz<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="text-center"><a href="{:U('Admin/Index/logout')}">注销</a></li>
+              </ul>
+            </li> -->
+            <li><a href="#">注销</a></li>
+          	</ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+	<div class="row clearfix">
+	<div class="col-md-12 column">
+	<div class="tabbable" id="">
+		<ul class="nav nav-tabs">
+		<li class="active">
+			 <a href="#panel-1" data-toggle="tab">工程安全标准</a>
+		</li>
+		<li >
+			 <a href="#panel-2" data-toggle="tab">工程实例</a>
+		</li>
+		<li >
+			 <a href="#panel-3" data-toggle="tab">安全评估</a>
+		</li>
+		<li >
+			 <a href="#panel-4" data-toggle="tab">用户资料</a>
+		</li>
+		<!-- <li >
+			 <a href="#panel-5" data-toggle="tab">用户资料</a>
+		</li> -->
+		</ul>
+		<div class="tab-content">
+		<div class="tab-pane active" id="panel-1">
+			<div class="row clearfix">
+				<div class="col-md-2 column" id="tab-1-column1">
+					<div class="list-group" id="tab-1-left">
+					  <a href="#" class="list-group-item ">
+					    无警工程
+					  </a>
+					  <a href="#" class="list-group-item">轻警工程</a>
+					  <a href="#" class="list-group-item">中警工程</a>
+					  <a href="#" class="list-group-item">重警工程</a>
+					</div>
+				</div>
+				<div class="col-md-10 column">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>
+								加速度
+							</th>
+							<th>
+								倾角
+							</th>
+							<th>
+								位移
+							</th>
+							<th>
+								裂纹
+							</th>
+							<th>
+								调查问卷
+							</th>
+							<th>
+								图片
+							</th>
+							<th>
+								处理后的数据
+							</th>
+							<th>
+								操作
+							</th>
+							<th>级别</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="level-0">
+							<td>1</td>
+							<td>
+								加速度值
+							</td>
+							<td>
+								倾角值
+							</td>
+							<td>
+								位移值
+							</td>
+							<td>
+								裂纹值
+							</td>
+							<td>
+								调查问卷值
+							</td>
+							<td>
+								<img src="./img/team.jpg" class="picture">
+							</td>
+							<td>
+								处理后的数据
+							</td>
+							<td>
+								<a href="./detail1.html"><button class="btn btn-xs">安全评估</button></a>
+							</td>
+						</tr>
+						<tr class="level-0">
+							<td>2</td>
+							<td>
+								加速度值
+							</td>
+							<td>
+								倾角值
+							</td>
+							<td>
+								位移值
+							</td>
+							<td>
+								裂纹值
+							</td>
+							<td>
+								调查问卷值
+							</td>
+							<td>
+								<img src="./img/team.jpg" class="picture">
+							</td>
+							<td>
+								处理后的数据
+							</td>
+							<td>
+								<a href="./detail1.html"><button class="btn btn-xs">安全评估</button></a>
+							</td>
+						</tr>
+						<tr class="level-1">
+							<td>3</td>
+							<td>
+								加速度值
+							</td>
+							<td>
+								倾角值
+							</td>
+							<td>
+								位移值
+							</td>
+							<td>
+								裂纹值
+							</td>
+							<td>
+								调查问卷值
+							</td>
+							<td>
+								<img src="./img/team.jpg" class="picture">
+							</td>
+							<td>
+								处理后的数据
+							</td>
+							<td>
+								<a href="./detail1.html"><button class="btn btn-xs">安全评估</button></a>
+							</td>
+						</tr>
+						<tr class="level-2">
+							<td>4</td>
+							<td>
+								加速度值
+							</td>
+							<td>
+								倾角值
+							</td>
+							<td>
+								位移值
+							</td>
+							<td>
+								裂纹值
+							</td>
+							<td>
+								调查问卷值
+							</td>
+							<td>
+								<img src="./img/team.jpg" class="picture">
+							</td>
+							<td>
+								处理后的数据
+							</td>
+							<td>
+								<a href="./detail1.html"><button class="btn btn-xs">安全评估</button></a>
+							</td>
+						</tr>
+						<tr class="level-3">
+							<td>5</td>
+							<td>
+								加速度值
+							</td>
+							<td>
+								倾角值
+							</td>
+							<td>
+								位移值
+							</td>
+							<td>
+								裂纹值
+							</td>
+							<td>
+								调查问卷值
+							</td>
+							<td>
+								<img src="./img/team.jpg" class="picture">
+							</td>
+							<td>
+								处理后的数据
+							</td>
+							<td>
+								<a href="./detail1.html"><button class="btn btn-xs">安全评估</button></a>
+							</td>
+						</tr>
+						
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane " id="panel-2">
+		<div class="row clearfix">
+			<div class="col-md-3 column" >
+			<div class="page-header">
+			  <h1><small>工程实例搜索 </small></h1>
+			</div>
+			<form style="width: 201px;margin: 10px;">
+			<div class="input-group">
+		      <input type="text" class="form-control">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="submit">搜索!</button>
+		      </span>
+		    </div><!-- /input-group -->
+			</form>
+			</div>
+			<div class="col-md-9 column" id="tab-2-column2" >
+			<table class="table">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>用户名</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>
+							用户名1
+						</td>
+						<td><a href="./detail2.html"><button class="btn btn-xs">查看详情</button></a></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>
+							用户名2
+						</td>
+						<td><a href="./detail2.html"><button class="btn btn-xs">查看详情</button></a></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>
+							用户名3
+						</td>
+						<td><a href="./detail2.html"><button class="btn btn-xs">查看详情</button></a></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>
+							用户名4
+						</td>
+						<td><a href="./detail2.html"><button class="btn btn-xs">查看详情</button></a></td>
+					</tr>
+
+				</tbody>
+			</table>
+			</div>
+		</div>	
+		</div>
+		<div class="tab-pane " id="panel-3">
+		<div class="row clearfix">
+			<div class="col-md-3 column" >
+			<div class="page-header">
+			  <h1><small>安全评估搜索 </small></h1>
+			</div>
+			<form style="width: 201px;margin: 10px;">
+			<div class="input-group">
+		      <input type="text" class="form-control">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="submit">搜索!</button>
+		      </span>
+		    </div><!-- /input-group -->
+			</form>
+			</div>
+			<div class="col-md-9 column" id="tab-2-column2" >
+			<table class="table">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>用户名</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>
+							用户名1
+						</td>
+						<td><a href="./detail3.html"><button class="btn btn-xs">安全评估信息</button></a></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>
+							用户名2
+						</td>
+						<td><a href="./detail3.html"><button class="btn btn-xs">安全评估信息</button></a></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>
+							用户名3
+						</td>
+						<td><a href="./detail3.html"><button class="btn btn-xs">安全评估信息</button></a></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>
+							用户名4
+						</td>
+						<td><a href="./detail3.html"><button class="btn btn-xs">安全评估信息</button></a></td>
+					</tr>
+
+				</tbody>
+			</table>
+			</div>
+		</div>
+		</div>
+		<div class="tab-pane " id="panel-4">
+		<div class="row clearfix">
+			<div class="col-md-3 column" >
+			<div class="page-header">
+			  <h1><small>用户搜索 </small></h1>
+			</div>
+			<form style="width: 201px;margin: 10px;">
+			<div class="input-group">
+		      <input type="text" class="form-control" placeholder="输入用户名">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default" type="submit">搜索!</button>
+		      </span>
+		    </div><!-- /input-group -->
+			</form>
+			</div>
+			<div class="col-md-9 column" id="tab-2-column2" >
+			<table class="table">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>用户名</th>
+						<th>性别</th>
+						<th>邮箱</th>
+						<th>年龄</th>
+						<th>安卓ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>
+							用户名1
+						</td>
+						<td>男</td>
+						<td>243906076@qq.com</td>
+						<td>20</td>
+						<td>bf67de77aa824da6</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>
+							用户名2
+						</td>
+						<td>男</td>
+						<td>243906076@qq.com</td>
+						<td>20</td>
+						<td>bf67de77aa824da6</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>
+							用户名3
+						</td>
+						<td>男</td>
+						<td>243906076@qq.com</td>
+						<td>20</td>
+						<td>bf67de77aa824da6</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>
+							用户名4
+						</td>
+						<td>男</td>
+						<td>243906076@qq.com</td>
+						<td>20</td>
+						<td>bf67de77aa824da6</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>
+							用户名5
+						</td>
+						<td>女</td>
+						<td>243906076@qq.com</td>
+						<td>20</td>
+						<td>bf67de77aa824da6</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+		</div>	
+		</div>
+		<!-- <div class="tab-pane" id="panel-5">
+		<div class="row clearfix">
+			<form class="form-horizontal col-md-6 col-md-offset-3" role="form">
+			  <div class="form-group">
+			  您对该城市公共安全状况的评分
+			    <select name="comment">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				</select>
+			  </div>
+			  <div class="form-group">
+			  您对城市公共安全的建议
+			    <textarea name="message" rows="10" cols="30">
+				您对城市公共安全的建议
+				</textarea>
+			  </div>
+			  <div class="form-group">
+			    您对本软件的建议
+			    <textarea name="message" rows="10" cols="30">
+				您对本软件的建议
+				</textarea>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">Sign in</button>
+			    </div>
+			  </div>
+			</form>
+			</div>
+	    </div> -->
+		</div>
+		</div>
+	</div>
+	</div>
+</div>
+  	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="./bootstrap/js/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.list-group a').click(function(event) {
+				$('.list-group a').removeClass('active');
+				$(this).addClass('active');
+			});
+
+			var level_0 = '<td>无警</td>';
+			var level_1 = '<td>轻警</td>';
+			var level_2 = '<td>中警</td>';
+			var level_3 = '<td>重警</td>';
+			$('.level-0').append(level_0);
+			$('.level-1').append(level_1);
+			$('.level-2').append(level_2);
+			$('.level-3').append(level_3);
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>admin</title>
+
+    <!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link rel="stylesheet" type="text/css" href="./css/index.css"> -->
+    <style type="text/css">
+    body {
+        /*overflow-x: hidden;*/
+        /*padding-right: 15px;*/
+        padding-top: 50px;
+        /*background-color: #E3FDFD;/*F5F5F5*/*/
+        font-family: '微软雅黑';
+        color: #EDF2F6;
+      background: #43C6AC; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #43C6AC , #191654); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #43C6AC , #191654); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    .navbar-inverse {
+        /*background-color: #3B4A6B;*/
+        /*border-color: #3B4A6B;*/
+        background-color: #283739;
+        border-color: #283739;
+    }
+    .row p {
+      font-size: 20px;
+    }
+    </style>
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
+            <a class="navbar-brand" href="#"><b>safe</b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                 <li >
+                    <a href="./admin.html">主页</a>
+                </li>
+                 <li>
+                    <a href="#">下载</a>
+                </li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">管理员登录</a></li>
+            <li><a href="#"><img src="./img/team.jpg" class="img-circle" style="width: 18px;height: 18px">&nbsp;管理员cz</a></li>
+            <!-- <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="./img/team.jpg" class="img-circle" style="width: 18px;height: 18px">&nbsp;管理员cz<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="text-center"><a href="{:U('Admin/Index/logout')}">注销</a></li>
+              </ul>
+            </li> -->
+            <li><a href="#">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> 
+<div class="container">
+  <div class="page-header">
+    <h1>工程实例详情： <small style="color: #fff;">用户1</small></h1>
+  </div>
+  <div class="row">
+    <p class="col-md-4">加速度</p><p class="col-md-4">加速度值</p>
+  </div>
+  <div class="row">
+    <p class="col-md-4">角度</p><p class="col-md-4">角度值</p>
+  </div>
+  <div class="row">
+    <p class="col-md-4">位移</p><p class="col-md-4">位移值</p>
+  </div>
+  <div class="row">
+    <p class="col-md-4">调查问卷</p><p class="col-md-4">加速度值</p>
+  </div>
+  <div class="row">
+    <p class="col-md-4">图片</p><p class="col-md-4">加速度值</p>
+  </div>
+</div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./bootstrap/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  </body>
+  </html>
